@@ -6,6 +6,7 @@ const uporCase = "ABCDEFGHIJKLMNOPQURSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const number = "0123456789";
 const symbol = "!@#$%^&*?"
+const allChar = uporCase + lowerCase + number + symbol;
 
 function creatPassword(){
     let password = " ";
@@ -16,6 +17,6 @@ function creatPassword(){
 
 
     while(length > Password.length){
-        
+    password += allChar[Math.floor(Math.random()*allChar.length)];
     }
 }
