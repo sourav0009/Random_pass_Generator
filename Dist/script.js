@@ -22,3 +22,13 @@ function creatPassword(){
 
     passwordBox.value = password;
 }
+
+function myCopy(){
+    const copyText = document.getElementById("password")
+
+    //im mobile
+    // copyText.select();
+    // copyText.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("clibord the text: " + copyText.value);
+}
